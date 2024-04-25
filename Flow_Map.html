@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Hunter's Portfolio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Hunter DeJager's Geovisualization Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="files/Hunter_DeJager_Resume.pdf">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mailto:hunterdejager@gmail.com">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading -->
+      <h1 class="my-4">South America Banana Trade
+        <small>2010</small>
+      </h1>
+
+      <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Highlight on Hover</title>
+        <style>
+          /* Center the portfolio item on the page */
+          .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Make the row full height of the viewport */
+          }
+        
+          .portfolio-item {
+            position: relative; /* Required for absolute positioning of overlay */
+            overflow: hidden; /* Ensure the overlay doesn't overflow */
+            width: 200%; /* Set the width to occupy 80% of the viewport width */
+            height: auto; /* Maintain aspect ratio */
+          }
+        
+          .highlight-overlay {
+            position: absolute; /* Position the overlay absolutely */
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background-color: rgba(0, 0, 255, 0); /* Initially transparent */
+            transition: background-color 0.3s ease; /* Smooth transition */
+            z-index: 1; /* Ensure overlay is on top of the image */
+          }
+        
+          .highlight-overlay:hover {
+            background-color: rgba(0, 0, 255, 0.5); /* Blue background with transparency */
+          }
+        
+          .highlight-on-hover {
+            display: block; /* Ensure the image is displayed as a block element */
+            width: 100%; /* Fill the container horizontally */
+            height: auto; /* Maintain aspect ratio */
+            max-width: none; /* Remove max-width limitation */
+            max-height: none; /* Remove max-height limitation */
+          }
+        
+          .hint {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.8); /* Light background */
+            text-align: center;
+            padding: 5px 0;
+            z-index: 2; /* Ensure hint is above the overlay */
+          }
+        </style>
+        </head>
+        <body>
+        
+        <div class="row">
+          <div class="col-lg-4 col-sm-4 portfolio-item">
+            <a href="files/projectfile.json" target="_blank">
+              <div class="highlight-overlay"></div> <!-- Overlay for highlighting -->
+              <img class="card-img-top highlight-on-hover" src="images/SA Bananas.png" id="largeImage">
+              <div class="hint">Click on image to see JSON file</div> <!-- Hint -->
+            </a>
+          </div>
+        </div>
+
+      <p
+        class="card-text"> This map represents the tons of banana trades in South America in 2019. The countries that have exported more bananas than they have imported are indicated in light green, and the countries that import more bananas than they export are indicated in dark green. I chose this color scheme because it uses one hue of green, making it easy to see the transition between rates of imports and exports within countries. I thought green would be an apporopriate color to use here because South America contains lots of rainforests and it matches well with the yellow flow lines. 
+        I used the default color black for the nodes that show gross total trade, both import and export, because it stands out well and is easy to interpret. The size of the circle indicates the amount of trades that occur in that particular country. Finally, the flow arrows indicate where bananas are being imported and exported. I chose to use a yellow to light green scheme here because it compliments the varying shades of green. Areas that are in yellow show where bananas are being exported, and areas in light green show where bananas are being imported. The size of the arrow indicates the total volume of banana trades.
+        The map shows that there is a high demand for banana imports in the southern countries such as Chile and Argentina as they are less suitable for growing bananas. Countries that are closer to the equator such as Brazil, Peru, and Columbia have climates favored to banana production, making them the highest exporters of bananas. 
+      </p>
+      </p>
+      <!-- /.row -->
+
+
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Hunter DeJager 2024</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
