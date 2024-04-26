@@ -73,16 +73,19 @@
           .portfolio-item {
             position: relative; /* Required for absolute positioning of overlay */
             overflow: hidden; /* Ensure the overlay doesn't overflow */
-            width: 200%; /* Set the width to occupy 80% of the viewport width */
-            height: auto; /* Maintain aspect ratio */
+            width: 80%; /* Set the width to occupy 80% of the viewport width */
+            height: 80vh; /* Set the height to occupy 80% of the viewport height */
+            display: flex; /* Use flexbox for centering */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
           }
         
           .highlight-overlay {
             position: absolute; /* Position the overlay absolutely */
             top: 0;
             left: 0;
-            width: 200%;
-            height: 200%;
+            width: 100%;
+            height: 100%;
             background-color: rgba(0, 0, 255, 0); /* Initially transparent */
             transition: background-color 0.3s ease; /* Smooth transition */
             z-index: 1; /* Ensure overlay is on top of the image */
@@ -93,11 +96,8 @@
           }
         
           .highlight-on-hover {
-            display: block; /* Ensure the image is displayed as a block element */
-            width: 100%; /* Fill the container horizontally */
+            max-width: 100%; /* Ensure the image doesn't exceed its container */
             height: auto; /* Maintain aspect ratio */
-            max-width: none; /* Remove max-width limitation */
-            max-height: none; /* Remove max-height limitation */
           }
         
           .hint {
@@ -118,11 +118,12 @@
           <div class="col-lg-4 col-sm-4 portfolio-item">
             <a href="files/projectfile.json" target="_blank">
               <div class="highlight-overlay"></div> <!-- Overlay for highlighting -->
-              <img class="card-img-top highlight-on-hover" src="images/SA Bananas.png" id="largeImage">
+              <img class="card-img-top highlight-on-hover" src="images/SA Bananas.png" id="largeImage" width="1314" height="791">
               <div class="hint">Click on image to see JSON file</div> <!-- Hint -->
             </a>
           </div>
         </div>
+        
 
       <p
         class="card-text"> This map represents the tons of banana trades in South America in 2019. The countries that have exported more bananas than they have imported are indicated in light green, and the countries that import more bananas than they export are indicated in dark green. I chose this color scheme because it uses one hue of green, making it easy to see the transition between rates of imports and exports within countries. I thought green would be an apporopriate color to use here because South America contains lots of rainforests and it matches well with the yellow flow lines. 
