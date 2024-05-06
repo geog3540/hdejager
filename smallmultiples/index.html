@@ -116,9 +116,7 @@
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////
 	// TODO: Change the variables below to customize the small multiples interface for your data
-	var polygonJSONFile = 'data/manhattan.json'
-
-
+	var polygonJSONFile = 'data/multnoma2.geojson'
 
 	// change the projection if needed *d3.geoAlbers()*
 	var projection = d3.geoAlbers();
@@ -250,7 +248,7 @@
 			////////////////////////////////////////////////////
 			// Normalize based multiplyby and divideby values
 			polygons.features.forEach(function(c) {
-				attributesToBeNormalized.forEach(function(d, i) {
+				attributesToBeNormalized.forEach(function (d, i) {
 					c.properties[d] = recalculateAttribute(c.properties[d], multiplyBy[i], c.properties[divideBy[i]]);
 				});
 			});
@@ -381,6 +379,7 @@
 				});
 
 				function recalculateAttribute(attribute, multiplyby, divideby) {
+					
 					// Function to catch errors when normalizing an attribute
 					// console.log(p, n);
 					if (!+divideby) {
